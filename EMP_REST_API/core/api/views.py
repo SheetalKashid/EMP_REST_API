@@ -1,13 +1,13 @@
-from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView, DestroyAPIView , UpdateAPIView, ListCreateAPIView
 from core.models import Employee
 from .serializers import EmployeeSerializer
+from django.shortcuts import render,redirect 
+from django.http import HttpResponse
+from rest_framework.parsers import JSONParser
 import requests
 import urllib
-from django.shortcuts import render,redirect 
-import json
-from django.http import HttpResponse
 import io
-from rest_framework.parsers import JSONParser
+import json
 
 class EmployeeListView(ListAPIView):
     #query to retrieve all the employee records from db
@@ -48,12 +48,22 @@ def save_emp(request):
         # print("else block") # just to verify whether on the second hit of the api , will it print this
         return redirect("/api/v1/details")
               
+#Retrieve a record
 class EmployeeDetailView(RetrieveAPIView):
     #retrieveing all the Employee records from db
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
 
+#Update the record
+class EmployeeUpdateView(UpdateAPIView):
+    #query to retrieve all the employee records from db
+    queryset = Employee.objects.all() 
+    serializer_class = EmployeeSerializer
 
-
+#Delete the record
+class EmployeeDeleteView(DestroyAPIView):
+    #query to retrieve all the employee records from db
+    queryset = Employee.objects.all() 
+    serializer_class = EmployeeSerializer   
 
 
