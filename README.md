@@ -52,7 +52,7 @@ The following repository describes the integration of public web API into your D
                  ![api3](https://user-images.githubusercontent.com/21193492/68829286-5b1edb80-06ce-11ea-800b-b1e5cb3f4717.png)
                   
              
-             - `localhost:8000/api/v1/1`: If you want to fetch a single employee record , then you need to hit this url which                 will basically retrieve from your local database.
+             - `localhost:8000/api/v1/employee/1`: If you want to fetch a single employee record , then you need to hit this                 url which will basically retrieve from your local database.
              
                 The fourth snapshot displays retrieval of the single record.
                 ![api4](https://user-images.githubusercontent.com/21193492/68829287-5bb77200-06ce-11ea-894d-8dc16bc5f05f.png)
