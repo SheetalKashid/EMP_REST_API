@@ -12,7 +12,7 @@ The following repository describes the integration of public web API into your D
       create a virtual environment by following command:   
           `virtualenv -p python3 .`
       
-      note : make sure you are in a virtualenv directory . you can also check by `pwd` command to check your current working directory.
+      note : make sure you are in a virtualenv directory . you can also check by `pwd` command to check your current working       directory.
     
     - Post successful creation of virtual environment, activate the virtual environment by:
            `source ./bin/activate`
@@ -22,13 +22,42 @@ The following repository describes the integration of public web API into your D
             
      - Running the Application
          
-         + Before executing the application, we need to create the Database tables.(note: make sure you are at manage.py level)
+         + Before executing the application, we need to create the Database tables.(note: make sure you are at manage.py level). But here I have already created the database tables, so you can skip this step. But if making any changes in models file, then you need to run this step by:
+         
+                `python manage.py makemigrations`
                 `python manage.py migrate`
          
          + Now you can run the development server by:
                  `python manage.py runserver`
          
          + To access the applications go to the URL http://localhost:8000/
+                  
+         + few things to remember : Post running the application at localhost, you will see the error page which also                    mentions the urls to hit . Following are the urls to hit:
          
+             - `localhost:8000/api/v1/` : Hit this url to fetch the records from the public web api as mentioned by me                        in the code. When you hit for the first time, it will fetch the records from the public web API and                          store it in your local database. 
+             
+                 The first snapshot is the terminal log which displays the successful fetch record statement of the web api                    into your localhost database. `note: it will take some time if the public api has huge amount of records.`
+                 
+                 ![api2](https://user-images.githubusercontent.com/21193492/68829285-5b1edb80-06ce-11ea-8a92-98df413c5e09.png)
+                 
+                 The second snapshot displays the json records post completion of the above data storing process:
+                 
+                  ![api1](https://user-images.githubusercontent.com/21193492/68829284-5b1edb80-06ce-11ea-9a99-d914555a1593.png)
+                  
+                    
+             - `localhost:8000/api/v1/details`: when you again hit the same url `localhost:8000/api/v1` again, it will fetch                 the records from your local database instead of fetching from public web API (which is time consuming) since                 the same records already being stored in your local database. This url will display all the employee details                 fetched.
+             
+                 The third snapshot displays the LISTVIEW of the API when you hit the same url `localhost:8000/api/v1` for the second time: This will fetch directly from local db.
+                  
+                 ![api3](https://user-images.githubusercontent.com/21193492/68829286-5b1edb80-06ce-11ea-800b-b1e5cb3f4717.png)
+                  
+             
+             - `localhost:8000/api/v1/1`: If you want to fetch a single employee record , then you need to hit this url which                 will basically retrieve from your local database.
+             
+                The fourth snapshot displays retrieval of the single record.
+                ![api4](https://user-images.githubusercontent.com/21193492/68829287-5bb77200-06ce-11ea-894d-8dc16bc5f05f.png)
+
+             
+             
          
 
