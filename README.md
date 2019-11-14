@@ -57,7 +57,14 @@ The following repository describes the integration of public web API into your D
                 The fourth snapshot displays retrieval of the single record.
                 ![api4](https://user-images.githubusercontent.com/21193492/68829287-5bb77200-06ce-11ea-894d-8dc16bc5f05f.png)
 
-             
+            - `localhost:8000/api/v1/employee/<pk>/update` : If you want to update the specific record , then u need                         to specify the id (<pk>). following is the snapshot for the same.
+    
+                ![api5](https://user-images.githubusercontent.com/21193492/68892669-8397eb80-0749-11ea-8834-593508e7c2ea.png)
+            
+            - `localhost:8000/api/v1/employee/delete` : If you want to delete the specific record , then u need to specify                  the id(which is basically a primary key).
+
+                ![api6](https://user-images.githubusercontent.com/21193492/68892677-87c40900-0749-11ea-920a-ae3056fe84ac.png)
+
              
          
 
