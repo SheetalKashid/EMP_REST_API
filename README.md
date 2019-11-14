@@ -32,7 +32,7 @@ The following repository describes the integration of public web API into your D
          
          + To access the applications go to the URL http://localhost:8000/
                   
-         + few things to remember : Post running the application at localhost, you will see the error page which also                    mentions the urls to hit . Following are the urls to hit:
+         + few things to remember : Post running the application at localhost, you will see the error page which also                    mentions the urls to hit . Following are the urls to hit and perform CRUD operations on the same:
          
              - `localhost:8000/api/v1/` : Hit this url to fetch the records from the public web api as mentioned by me                        in the code. When you hit for the first time, it will fetch the records from the public web API and                          store it in your local database. 
              
