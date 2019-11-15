@@ -56,7 +56,11 @@ The following repository describes the integration of public web API into your D
              
                 The fourth snapshot displays retrieval of the single record.
                 ![api4](https://user-images.githubusercontent.com/21193492/68829287-5bb77200-06ce-11ea-894d-8dc16bc5f05f.png)
-
+               `note: Before proceeding with update and delete, you should create a superuser (eg: admin) so that you can                                 perform the update, delete operations with superuser privileges by following command:`
+                      `python manage.py createsuperuser`
+                      
+                      here u need to mention the username, password and email id(optional).
+                      
             - `localhost:8000/api/v1/employee/<pk>/update` : If you want to update the specific record , then u need                         to specify the id (<pk>). following is the snapshot for the same.
     
                 ![api5](https://user-images.githubusercontent.com/21193492/68892669-8397eb80-0749-11ea-8834-593508e7c2ea.png)
